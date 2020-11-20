@@ -12,7 +12,7 @@ class MainController
             case NULL: /************************************* Main page *************************************/
 
                 $list = DaoCrew::read(); // Give the list from database to variable "$list"
-                require_once('views/formAndList.phtml'); //
+                require_once('views/formAndList.phtml'); // Show the main page
                 break;
 
             case 'addcrew': /*********************************** Add crew code ***********************************/
@@ -27,10 +27,10 @@ class MainController
                     */
 
                     DaoCrew::create($newCrewName);
-                    header('location: index.php');     // Go to page "view/whoami.php"
+                    header('location: index.php');     // Go to main page
 
                 } else {
-                    header('location: index.php');     // Go to page "view/whoami.php"
+                    header('location: index.php');     // Go to main page
                 }
 
                 break;
