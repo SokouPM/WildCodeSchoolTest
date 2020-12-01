@@ -21,9 +21,9 @@ class MainController
 
                     $newCrewName = filter_var(ucfirst(mb_strtolower($_POST['name'])), FILTER_SANITIZE_SPECIAL_CHARS);
                     /*
-                    * filter_var => remove html tags
-                    * ucfirst => capitalize the first letter
-                    * mb_strtolower => lowercase all letters
+                    filter_var => remove html tags
+                    ucfirst => capitalize the first letter
+                    mb_strtolower => lowercase all letters
                     */
 
                     DaoCrew::create($newCrewName);
@@ -32,7 +32,6 @@ class MainController
                 } else {
                     header('location: index.php');     // Go to main page
                 }
-
                 break;
 
             default:
