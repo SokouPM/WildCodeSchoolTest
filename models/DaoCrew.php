@@ -24,7 +24,8 @@ class DaoCrew
             return $tab;
 
         } catch (Exception $e) {
-            echo ('Erreur : ' . $e->getMessage() . ' ! ');    // Send the error message.		
+            echo ('Erreur : ' . $e->getMessage() . ' ! ');    // Send the error message.
+            die;    // Stop application		
         }
     }
     
@@ -38,7 +39,8 @@ class DaoCrew
         try {
             $request->execute();    // Execute the request
         } catch (Exception $e) {
-            echo ('Erreur : ' . $e->getMessage() . ' ! ');    // Send the error message.		
+            echo ('Erreur : ' . $e->getMessage() . ' ! ');    // Send the error message.
+            die;    // Stop application		
         }
     }
 }
